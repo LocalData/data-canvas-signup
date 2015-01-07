@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Canvas Device Registration</title>
+  <style type="text/css">
+    @import url('css/styles.css');
+  </style>
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/get-started.js"></script>
+</head>
+<body>
+  <header class="out">
+    <div class="in">
+      <h1 class="logo"><a href=".">LocalData</a></h1>
+    </div>
+  </header>
+
+  <div class="out contrast">
+    <div class="in full-width">
+      <h1>Data Canvas</h1>
+    </div>
+  </div>
+
+  <div class="out contrast">
+    <div class="in">
+      <div class="a" id="register">
+        <h2 class="section-header">Let&apos;s get started!</h2>
+        <p>Enter your information to receive an ID and secret authorization token for your device. You'll use these in the software configuration process to allow your sensor node to submit data to the LocalData server. Keep the authorization token safe!</p>
+        <form action="" id="sec-form">
+          <div class="hidden req" id="req-message">Oops, you're missing some required fields.</div>
+          <div class="single">
+            <label for="form-name">Name<a class="req">*</a></label>
+            <input type="text" name="name" id="form-name" placeholder="Your name" data-required="true" />
+          </div>
+
+          <div class="single">
+            <label for="form-email">Email<a class="req">*</a></label>
+            <input type="text" name="email" id="form-email" placeholder="Email address" data-required="true" />
+          </div>
+
+          <div class="single">
+            <label for="form-city">City<a class="req">*</a></label>
+            <input type="text" name="city" id="form-city" placeholder="City" data-required="true" />
+          </div>
+          <input type="submit" value="Submit" class="input-submit" id="form-submit" />
+        </form>
+      </div>
+      <div class="a hidden" id="keys">
+        <h2 class="section-header">Your device details:</h2>
+        <p>Keep this information safe. You should treat the raw access key and encoded bearer token as secret. The User ID is the unique identifier for your device. You will use the User ID and bearer token during the software configuration process for your device. Enjoy!</p>
+        <p><span class="key">User ID:</span><br><span class="value" id="user-id"></span></p>
+        <p><span class="key">Encoded bearer token:</span><br><span class="value" id="bearer-token"></span></p>
+        <p><span class="key">Raw access key:</span><br><span class="value" id="access-key"></span></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
