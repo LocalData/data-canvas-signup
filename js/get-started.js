@@ -34,6 +34,7 @@
       var data = {
         name: $('#form-name').val(),
         email: email,
+        device: $('#form-device').val(),
         city: $('#form-city').val()
       };
 
